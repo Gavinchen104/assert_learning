@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "title": "Team review guidelines",
+  "sections": [
+    {
+      "id": "scope",
+      "heading": "Scope & intent",
+      "bullets": [
+        "Does the change match the ticket or PR description?",
+        "Is the diff minimal for the problem being solved?",
+        "Are unrelated refactors split out or called out clearly?"
+      ]
+    },
+    {
+      "id": "correctness",
+      "heading": "Correctness",
+      "bullets": [
+        "Edge cases and error paths are handled or explicitly deferred.",
+        "Types and invariants match runtime behavior.",
+        "Concurrency, ordering, and idempotency are considered where relevant."
+      ]
+    },
+    {
+      "id": "security",
+      "heading": "Security & privacy",
+      "bullets": [
+        "Inputs are validated; secrets never logged or committed.",
+        "AuthZ checks apply to new endpoints or UI surfaces.",
+        "Dependencies and transitive risk are acceptable for the change."
+      ]
+    },
+    {
+      "id": "tests",
+      "heading": "Tests & observability",
+      "bullets": [
+        "Critical paths have coverage or a clear reason they do not.",
+        "Logs and metrics help diagnose failures in production.",
+        "Rollout, feature flags, or migrations are safe to operate."
+      ]
+    },
+    {
+      "id": "tone",
+      "heading": "Review tone",
+      "bullets": [
+        "Prefer questions and suggestions over demands.",
+        "Separate blocking issues from nice-to-haves.",
+        "Acknowledge what works well—it speeds up the next iteration."
+      ]
+    }
+  ]
+}
